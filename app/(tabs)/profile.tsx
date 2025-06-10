@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image, ScrollView, Alert } from 'react-native';
 import { Ionicons, FontAwesome5, MaterialCommunityIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import { router } from 'expo-router';
 
 const demoUser = {
   name: 'John Smith',
@@ -27,7 +28,8 @@ export default function ProfileScreen() {
     Alert.alert('Edit Photo', 'Photo editing not implemented in demo.');
   };
   const handleSignOut = () => {
-    Alert.alert('Sign Out', 'Sign out action not implemented in demo.');
+    // Use expo-router for navigation
+    router.replace('/welcome');
   };
   const handleChangePassword = () => {
     Alert.alert('Change Password', 'Change password not implemented in demo.');
@@ -69,11 +71,11 @@ export default function ProfileScreen() {
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>My Activity</Text>
         <View style={styles.sectionList}>
-          <TouchableOpacity style={styles.sectionItem} onPress={() => navigation.navigate('PastBookings')}>
+          <TouchableOpacity style={styles.sectionItem} /* onPress={() => navigation.navigate('PastBookings')}> */>
             <Ionicons name="golf-outline" size={22} color="#2D5838" style={styles.sectionIcon} />
             <Text style={styles.sectionItemText}>Past Tee Bookings</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.sectionItem} onPress={() => navigation.navigate('PastLessons')}>
+          <TouchableOpacity style={styles.sectionItem} /*  onPress={() => navigation.navigate('PastLessons')}> */>
             <FontAwesome5 name="chalkboard-teacher" size={20} color="#D4AF37" style={styles.sectionIcon} />
             <Text style={styles.sectionItemText}>Past Lessons</Text>
           </TouchableOpacity>
