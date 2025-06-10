@@ -10,7 +10,7 @@ import {
   Alert,
 } from 'react-native';
 import { router } from 'expo-router';
-import { Plus, Edit, Trash2, Users, Calendar, Clock, X } from 'lucide-react-native';
+import { Plus, CreditCard as Edit, Trash2, Users, Calendar, Clock, X } from 'lucide-react-native';
 
 interface Event {
   id: string;

@@ -1,5 +1,5 @@
 import { Tabs } from 'expo-router';
-import { Calendar, Users, BarChart3 } from 'lucide-react-native';
+import { Calendar, Users, ChartBar as BarChart3 } from 'lucide-react-native';
 
 export default function AdminTabLayout() {
   return (

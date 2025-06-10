@@ -9,7 +9,7 @@ import {
   Alert,
 } from 'react-native';
 import { router } from 'expo-router';
-import { Search, Edit, Ban, CheckCircle, Mail, Phone } from 'lucide-react-native';
+import { Search, CreditCard as Edit, Ban, CircleCheck as CheckCircle, Mail, Phone } from 'lucide-react-native';
 
 interface Member {
   id: string;
