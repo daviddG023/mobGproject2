@@ -128,7 +128,14 @@ export default function WelcomeScreen() {
       return;
     }
 
-    // Simulate successful authentication
+    // Check for admin credentials
+    if (form.email === 'admin@gmail.com' && form.password === 'admin123') {
+      setShowAuthModal(false);
+      router.replace('/(admin)/event-management');
+      return;
+    }
+
+    // Simulate successful authentication for regular users
     setShowAuthModal(false);
     router.replace('/(tabs)');
   };
